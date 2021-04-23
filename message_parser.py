@@ -1,3 +1,7 @@
+'''
+Util File
+'''
+
 import re
 from typing import List
 
@@ -30,6 +34,10 @@ class Parser:
         pass
 
     def parse(self, content) -> dict:
+        '''
+        :param content:  message
+        :return: a dict
+        '''
         result_dict = {}
 
         for item in self.item_list:
@@ -49,7 +57,8 @@ class Parser:
                     break
 
             if item.name not in result_dict.keys():
-                result_dict[item.name] = 'Not Found' # Not Found Error
+                # result_dict[item.name] = 'Not Found' # Not Found Error
+                pass
 
         return result_dict
 
