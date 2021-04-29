@@ -10,9 +10,10 @@ with open('./data.txt', encoding='utf-8') as file:
 data_list = data.split('\n') #
 
 # new class Parser
-parser = Parser()
+parser = Parser('./rule.properties', encoding='gbk')
 
 for idx, line in enumerate(data_list):
     line = line.strip()
     result = parser.parse(line)  # parse message, return a dict
     print(idx+1, result)
+
